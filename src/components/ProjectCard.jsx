@@ -8,8 +8,8 @@ const ProjectCard = ({ project }) => (
   <div className="p-6 bg-white rounded-lg shadow-lg mb-4 text-gray-800">
     <div className="flex items-center mb-4">
       <h3 className="text-2xl font-semibold">{project.title}</h3>
-      <Tippy content={project.statusDescription}>
-        <span className="ml-2 text-xl">{project.status}</span>
+      <Tippy content={project.statusDescription} placement="top">
+        <span className="ml-2 text-xl cursor-pointer">{project.status}</span>
       </Tippy>
     </div>
     <ReactMarkdown

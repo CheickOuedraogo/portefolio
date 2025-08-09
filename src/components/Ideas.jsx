@@ -8,15 +8,33 @@ const Ideas = () => {
   useEffect(() => {
     const loadIdeas = async () => {
       try {
-        const response = await fetch("/src/ideas/ideas.json");
-        const data = await response.json();
+        const response = await fetch("/data/ideas.json");
+        if (!response.ok) {
+          throw new Error(
+            `Failed to fetch ideas.json: ${response.status} ${response.statusText}`
+          );
+        }
+        const text = await response.text();
+        console.log("Raw response:", text); // Vérifier dans la console
+        let data;
+        try {
+          data = JSON.parse(text);
+        } catch (e) {
+          throw new Error("Invalid JSON format in ideas.json");
+        }
         const updatedIdeas = await Promise.all(
           data.map(async (idea) => {
-            const response = await fetch(`/src/ideas/${idea.markdownFile}`);
-            if (!response.ok) {
-              throw new Error(`Failed to load ${idea.markdownFile}`);
+            const markdownResponse = await fetch(`/ideas/${idea.markdownFile}`);
+            if (!markdownResponse.ok) {
+              console.warn(
+                `Failed to load ${idea.markdownFile}: ${markdownResponse.statusText}`
+              );
+              return {
+                ...idea,
+                markdownContent: `# ${idea.markdownFile}\nErreur de chargement.`,
+              };
             }
-            const markdownContent = await response.text();
+            const markdownContent = await markdownResponse.text();
             return { ...idea, markdownContent };
           })
         );
@@ -53,7 +71,7 @@ const Ideas = () => {
           </div>
         ))
       ) : (
-        <p>Aucune idée chargée. Vérifiez les fichiers Markdown.</p>
+        <p>Aucune idée chargée. Vérifiez la console pour plus de détails.</p>
       )}
     </section>
   );
