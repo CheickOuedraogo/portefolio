@@ -1,0 +1,18 @@
+[
+  {
+    "id": 1,
+    "title": "Chat App",
+    "status": "🚀",
+    "statusDescription": "In Progress",
+    "markdownFile": "project1.md",
+    "link": "https://github.com/CheickOuedraogo/chat-app"
+  },
+  {
+    "id": 2,
+    "title": "Chat Backend",
+    "status": "✅",
+    "statusDescription": "Completed",
+    "markdownFile": "project2.md",
+    "link": "https://github.com/CheickOuedraogo/chat-backend"
+  }
+]
