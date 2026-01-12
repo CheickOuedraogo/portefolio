@@ -190,11 +190,15 @@ ul {
 .hero-container {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center; /* Center horizontally */
+    text-align: center; /* Center text */
 }
 
 .hero-content {
-    flex: 1;
+    flex: 0 1 800px; /* Limit width */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .greeting {
@@ -204,21 +208,21 @@ ul {
 }
 
 .name {
-    font-size: 4rem;
+    font-size: 5rem; /* Increased size since it's the main focus now */
     line-height: 1.1;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 }
 
 .subtitle {
     font-size: 2.5rem;
     color: #94a3b8;
-    margin-bottom: 25px;
+    margin-bottom: 30px;
     font-weight: 500;
 }
 
 .description {
-    max-width: 500px;
-    font-size: 1.1rem;
+    max-width: 600px; /* Slightly wider */
+    font-size: 1.2rem;
     color: #cbd5e1;
     margin-bottom: 40px;
 }
@@ -226,6 +230,7 @@ ul {
 .cta-buttons {
     display: flex;
     gap: 20px;
+    justify-content: center;
 }
 
 .btn {
