@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ouedrago Bonaventure Cheick Hamed | Portfolio</title>
+    <meta name="description" content="Portfolio de Ouedrago Bonaventure Cheick Hamed, Développeur Web Junior et Étudiant en Machine Learning.">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <canvas id="neural-canvas"></canvas>
+    
+    <header class="header">
+        <div class="logo">
+            <span class="logo-text">OBCH<span class="dot">.</span></span>
+        </div>
+        <nav class="nav">
+            <ul class="nav-list">
+                <li><a href="#home" class="nav-link">Accueil</a></li>
+                <li><a href="#about" class="nav-link">À Propos</a></li>
+                <li><a href="#projects" class="nav-link">Projets</a></li>
+                <li><a href="#contact" class="nav-link btn-contact">Contact</a></li>
+            </ul>
+            <div class="mobile-menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="hero">
+            <div class="container hero-container">
+                <div class="hero-content fade-in-up">
+                    <p class="greeting">Bonjour, je suis</p>
+                    <h1 class="name">Ouedrago Bonaventure<br>Cheick Hamed</h1>
+                    <h2 class="subtitle">Junior <span class="highlight-cyan">Web Dev</span> & <span class="highlight-purple">ML Enthusiast</span></h2>
+                    <p class="description">
+                        Passionné par la création d'expériences web interactives et l'exploration des frontières de l'intelligence artificielle avec <span class="tensor-text">TensorFlow</span>.
+                    </p>
+                    <div class="cta-buttons">
+                        <a href="#contact" class="btn btn-primary">Me Contacter</a>
+                        <a href="#about" class="btn btn-outline">En savoir plus</a>
+                    </div>
+                </div>
+                
+                <div class="hero-image-wrapper fade-in-up delay-200">
+                    <div class="photo-placeholder-container">
+                        <!-- PLACEHOLDER PHOTO -->
+                        <!-- Remplacer cette div par <img src="votre-photo.jpg" =alt="Ma Photo" class="profile-photo"> -->
+                        <div class="photo-placeholder">
+                            <i class="fas fa-user-astronaut"></i>
+                            <span>Votre Photo Ici</span>
+                        </div>
+                        <div class="orbit orbit-1"></div>
+                        <div class="orbit orbit-2"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="section">
+            <div class="container">
+                <div class="section-header fade-in-on-scroll">
+                    <h2 class="section-title"><span class="number">01.</span> À Propos</h2>
+                    <div class="line"></div>
+                </div>
+                
+                <div class="about-grid fade-in-on-scroll">
+                    <div class="about-text-col">
+                        <p>
+                            Salut ! Je suis un développeur passionné basé à <strong>Ouagadougou</strong>. J'ai un vif intérêt pour le développement web full-stack et une curiosité grandissante pour le Machine Learning.
+                        </p>
+                        <p>
+                            Mon objectif est de combiner des interfaces web performantes avec la puissance de l'IA. Je maîtrise l'architecture backend et frontend tout en plongeant dans les algorithmes de deep learning avec <strong>TensorFlow</strong>.
+                        </p>
+                        
+                        <div class="stats-row">
+                            <div class="stat-item">
+                                <span class="stat-number">2+</span>
+                                <span class="stat-label">Années d'Exp.</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">10+</span>
+                                <span class="stat-label">Projets</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">∞</span>
+                                <span class="stat-label">Passion</span>
+                            </div>
+                        </div>
+
+                        <h3 class="skills-heading">Stack Technique</h3>
+                        <div class="skills-tags">
+                            <span class="skill-tag">JavaScript (ES6+)</span>
+                            <span class="skill-tag">Python</span>
+                            <span class="skill-tag highlight">TensorFlow</span>
+                            <span class="skill-tag">Node.js</span>
+                            <span class="skill-tag">React</span>
+                            <span class="skill-tag">HTML5 & CSS3</span>
+                            <span class="skill-tag">Git</span>
+                            <span class="skill-tag">SQL</span>
+                        </div>
+                    </div>
+
+                    <div class="about-visual-col">
+                        <div class="code-window">
+                            <div class="window-header">
+                                <div class="dot red"></div>
+                                <div class="dot yellow"></div>
+                                <div class="dot green"></div>
+                            </div>
+                            <div class="window-body">
+                                <div class="code-line"><span class="keyword">const</span> <span class="variable">developer</span> = {</div>
+                                <div class="code-line indent">    name: <span class="string">'Ouedrago Bonaventure'</span>,</div>
+                                <div class="code-line indent">    role: <span class="string">'Full Stack Dev'</span>,</div>
+                                <div class="code-line indent">    passion: <span class="string">'Machine Learning'</span>,</div>
+                                <div class="code-line indent">    learning: [<span class="string">'TensorFlow'</span>, <span class="string">'Keras'</span>],</div>
+                                <div class="code-line indent">    hardWorker: <span class="keyword">true</span></div>
+                                <div class="code-line">};</div>
+                                <div class="code-line"><br></div>
+                                <div class="code-line"><span class="comment">// Ready to build the future</span></div>
+                                <div class="code-line"><span class="function">startCoding</span>(developer);</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="section">
+            <div class="container">
+                <div class="section-header fade-in-on-scroll">
+                    <h2 class="section-title"><span class="number">02.</span> Mes Projets</h2>
+                    <div class="line"></div>
+                </div>
+
+                <div class="cards-grid">
+                    <!-- Project 1 -->
+                    <div class="card project-card fade-in-on-scroll">
+                        <div class="project-image-wrapper">
+                            <div class="project-image-placeholder color-1">
+                                <i class="fas fa-laptop-code"></i>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="card-title">Portfolio Personnel</h3>
+                            <p class="card-desc">Le site sur lequel vous naviguez. Conçu avec une approche mobile-first, des animations fluides et un mode sombre immersif.</p>
+                            <ul class="card-tags">
+                                <li>HTML5</li>
+                                <li>CSS3</li>
+                                <li>JavaScript</li>
+                            </ul>
+                            <div class="project-links">
+                                <a href="#" target="_blank"><i class="fab fa-github"></i> Code</a>
+                                <a href="#" target="_blank"><i class="fas fa-external-link-alt"></i> Demo</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Project 2 -->
+                    <div class="card project-card fade-in-on-scroll">
+                        <div class="project-image-wrapper">
+                            <div class="project-image-placeholder color-2">
+                                <i class="fas fa-lock"></i>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="card-title">Gestionnaire de Mots de Passe</h3>
+                            <p class="card-desc">Une application web sécurisée pour générer et gérer vos mots de passe. Interface simple et efficace.</p>
+                            <ul class="card-tags">
+                                <li>JavaScript</li>
+                                <li>HTML/CSS</li>
+                                <li>LocalStorage</li>
+                            </ul>
+                            <div class="project-links">
+                                <a href="https://github.com/CheickOuedraogo/password-manager" target="_blank"><i class="fab fa-github"></i> Code</a>
+                                <a href="https://cheickouedraogo.github.io/password-manager/" target="_blank"><i class="fas fa-external-link-alt"></i> Demo</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="section">
+            <div class="container contact-wrapper">
+                 <div class="contact-card fade-in-on-scroll">
+                    <span class="number-corner">03.</span>
+                    <h2 class="contact-heading">Contactez-moi</h2>
+                    <p class="contact-text">
+                        Je suis actuellement à l'écoute de nouvelles opportunités. Que vous ayez une question, un projet ou juste pour dire bonjour, ma boîte de réception est toujours ouverte !
+                    </p>
+                    
+                    <a href="mailto:hcheick75@gmail.com" class="btn btn-primary big-btn">
+                        <i class="far fa-envelope"></i> hcheick75@gmail.com
+                    </a>
+
+                    <div class="contact-socials">
+                        <p class="find-me">Retrouvez-moi sur</p>
+                        <a href="https://github.com/CheickOuedraogo" target="_blank" aria-label="GitHub" class="social-icon">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </div>
+                 </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p class="copyright">
+                Conçu et développé par <span class="highlight-cyan">Ouedrago Bonaventure</span><br>
+                &copy; 2026 Tous droits réservés.
+            </p>
+        </div>
+    </footer>
+
+    <script src="js/background.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
